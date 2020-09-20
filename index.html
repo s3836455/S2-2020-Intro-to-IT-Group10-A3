@@ -557,5 +557,780 @@
                     Although we decided to have CodeX as our group project, the original story behind CodeX is from Quynh’s idea after years of coding/programming self-study. Quynh shared with us that the free and available content for learning programming languages online is really good and helpful; however, there is still room for improvements. As most of the well-known web applications in this category are in English, it is really hard for Vietnamese users, especially those who do not have proper English skills but really want to study coding and programming. This creates a big barrier for them, and in results, limiting the number of users in this category. Even for Quynh, who has adequate English skills in general, she still has trouble understanding the concepts and languages during her self-study time. As Vietnam is entering its 4.0 technology era, even more and more people will think about applying for a job in the IT industry and CodeX is her and our group’s answer to that demand.
                 </div>
                 <br />
+
+                <!--What your project will do?-->
+                <div>
+                    <div>
+                        <b>What your project will do ?</b>
+                    </div>
+                    <p>
+                        Our project would be a web application called CodeX that could help users in Vietnam learn how to code and program. This application will provide many walkthrough tutorials to learn different programming languages such as C++, Java, Python, etc. Moreover, at the end of each session, to know if the users understand what they have learned, CodeX will provide several quizzes to help users remember the course easier. Besides that, it will have many mentors available for you to ask how to start coding, which is the best language for you to learn. Moreover, you can match with somebody that starts the same program path as you. Therefore, you can learn something new from others and tell them about what you have learned because one of the best ways to learn something is teaching it to somebody else. If you finish our tutorials, there are many challenges or pet projects to do as practice makes perfect.
+                    </p>
+                    <br />
+
+                    <!--How you will do it-->
+                    <div>
+                        <b>How you will do it ?</b>
+                    </div>
+                    <p>
+                        CodeX will be written using mainly HTML, CSS and Javascript. However, to discuss deeply in how we develop this application, there are many things we have to do and we will separate it into 2 categories which are the root  (mainly about the technical stuff) and the interface (design, content stuff,etc.)
+                    </p>
+
+                    <div>
+                        After our group has agreed on the topic for our project, we jumped right into researching the features for web application CodeX. Here the 10 features we want for our project:
+                        <ul>
+                            <li>
+                                Login System
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Quiz/ Survey / Questionnaires
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Online Chatting Services
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Online Interpreter
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Online judging system
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                The forum
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Videos / Tutorial/ Exercise/ PetProject
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Illustration and Images
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Recruitment services
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                Hackathon/ Competition
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--The root and the techniques-->
+                    <div>
+                        <b>The technical and techniques</b>
+                    </div>
+                    <ol>
+
+                        <!--Login Systems-->
+                        <li>Login Systems</li>
+                        <br />
+                        <b>Brief description:</b> When the users use our website, they have to register for an account first since we can record their grade when they do the quiz, the test or keep track of which course they last visited and which course they have finished so the users don’t have to remember. Therefore, there are two things we have to do: making the login/ logout/ register session and connect it to our database
+                        <br />
+                        <br />
+                        <b>How we will do that ?</b>
+                        <br />
+                        <br />
+                        According to the Tutorial Republic in “PHP MySQL Login Systems”, there are 2 sections and in each section, there are some steps we need to follow:
+                        <br />
+                        <br />
+                        <ul>
+                            <li>
+                                <b>Building the registration systems</b>
+                                <br />
+                            </li>
+                            <br />
+                            <div>
+                                <b>Step 1:</b> Creating the MySQL database table
+                                <br />
+                                <br />
+                                Create the database with the name “users”. Then create the table with the name “users_information” which contains the following attributes such as user_id, name, password, emai.
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 2:</b> Creating the config file
+                                <br />
+                                <br />
+                                After creating the table, we will then use PHP script as below to connect to our MySQL database servers
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\login\2.png" />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 3:</b> Making the Register form
+                                <br />
+                                <br />
+                                Firstly, we will make the basic form using HTML and CSS like below
+                                <br />
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\login\signup.png" />
+                                <br />
+                                Then we made the PHP code that helps users to register by themselves. Moreover, this script can generate errors and notify it to them such as registering with the existing address, the email not valid, the password is easy to predict, etc.
+                                <br />
+                            </div>
+                            <br />
+                            <li>
+                                <b>Building the Login System</b>
+                            </li>
+                            <br />
+                            <div>
+                                <b>Step 1:</b> Creating the login form
+                                <br />
+                                <br />
+                                Firstly, we make the basic login form using HTML and CSS
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\login\login.png" />
+                                <br />
+                                Then we make the PHP script to check if the user’s login information is fulfilled. If it meets those requirements, the code will execute the query and find the information that the user filled. If it is matched, we will store the user_id in session and redirect users to the homepage.
+
+                                <br />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 2:</b> Adding some code in the homepage
+                                <br />
+                                <br />
+                                If people redirect to the homepage if they successfully login into the account. However, we have to check again to check if the user logged in since with some case, the users may go directly into the homepage without accessing
+                                <br />
+
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 3:</b> Creating the log out script
+                                <br />
+                                <br />
+                                When the user clicks on the "sign out" button, the script will be called to destroy the session and redirect the user to the login page
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\login\singout.png" />
+                                <br />
+                            </div>
+
+                        </ul>
+                        <br />
+
+
+
+                        <!--Quiz/ Survey/ Questionaries-->
+                        <li>
+                            Quiz/ Survey / Questionnaires
+                        </li>
+                        <br />
+                        <b>Brief description:</b>After the tutorial, the users have to do some quizzes. In each quiz, the users will be given 4 options and just one is correct. Depending on what users choose, there will be a notification if they are right or wrong. After finishing all the quizzes for the lessons, it will display how many times that users choose the correct one toward the total quizzes given. This method will be implemented in the survey and questionnaires also. The way we make the content for the quiz will be mentioned in the “Interface and the process” section
+                        <br />
+                        <br />
+                        According to the “Building the Simple Quiz” by “Chris Coyier”, there are 2 steps:
+                        <br />
+                        <br />
+                        <div>
+                            <b>Step 1: </b> Making the HTML script for the platform of the quizzes
+                        </div>
+                        <div>
+                            All the questions have to be contained in the form tag
+                        </div>
+                        <br />
+                        <div>
+                            Quizzes are the list of questions. Therefore, for each question, it will be wrapped in the li tag and it will look like this
+                            <br />
+                            <br />
+                            <img class="image-center" src="image\detail\quiz\1.png" />
+                            <br />
+                        </div>
+
+
+                        <div>
+                            At the end of the form, we have to include the submit button
+                            <br />
+                            <br />
+                            <img class="image-center" src="image\detail\quiz\2.png" />
+                            <br />
+                        </div>
+
+
+                        <div>
+                            <b>Step 2: </b> Checking the answer using a PHP script
+                        </div>
+                        <div>
+                            First, we create the “grade.php” file. In this file, we have to grab the value that has been POSTed. We take that value and check if it is a correct answer and if it does, we increase the number of correct answers. Finally, we will display the result at the end using a div tag.
+                        </div>
+                        <br />
+
+
+                        <!--Online chatting services-->
+                        <li>Online chatting services</li>
+                        <br />
+                        <b>Brief description: </b>Between tutorial walkthrough or doing the pet project, the user may need to get support from mentors. Therefore, we need to include the chatbox that helps to connect the users and the mentors.
+                        <br />
+                        <br />
+                        <b>How will we do ?</b>
+                        <br />
+                        <br />
+                        After researching, there are 2 possible solutions for this:
+
+                        <br />
+                        <br />
+                        <ul>
+                            <li>
+                                <b>Using the existing live chat software: </b>
+                                <br />
+                            </li>
+                            <br />
+                            <div>
+                                <br />
+                                <img class="image-center" src="image\detail\chat\0.jpg" />
+                                <br />
+                                For this, we choose HubSpot. First, we will register for an account.
+                                <br />
+                                <br />
+                            </div>
+                            <div>
+                                Secondly, we go to the “Conversation” section in the menu bar. Then we choose “Chat flow.”
+                                <br />
+                                <br />
+                            </div>
+                            <div>
+                                In the “Chat flow” page, we will click the “Create chat flow” button and follow the tutorial to design for your chat widget.
+                                <br />
+                                <br />
+                            </div>
+                            <div>
+                                In the end, we will embed the following script to our website
+                                <br />
+                                <br />
+                            </div>
+                            <br />
+                            <li>
+                                <b>Making the chat application by PHP</b>
+                            </li>
+                            <br />
+                            According to “How to make your own simple chat application in PHP” by Script Tutorial. There are 3 things we have to do:
+                            <br />
+                            <br />
+                            <div>
+                                <b>Step 1:</b> HTML
+                                <br />
+                                <br />
+                                First, we will make the main chatting window by using frameset tags
+                                <br />
+                                <br />
+                                Then we will create the 2 sections for the form that users edit and send the message and the box that display the message.
+                                <br />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 2:</b> CSS
+                                <br />
+                                <br />
+                                In this CSS file, we will decorate our chatbox, changing the font style, the colour, etc. We will display as below
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\chat\1.jpg" />
+                                <br />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 3:</b> MySQL
+                                <br />
+                                <br />
+                                First, we will create the database “chatting”. Secondly, we create the table named “chat_message” with the following attributes: id, name, message and date. Finally, we go to PHPMyAdmin, past our code on it and execute the queries.
+                                <br />
+                                <br />
+                                <br />
+                            </div>
+                            <div>
+                                <b>Step 4:</b> PHP
+                                <br />
+                                <br />
+                                After creating the login.php as we have mentioned, we will create the chat.php file which has two main functions: acceptMessage (accept sending the message and then store it in the database) and getMessage (return the list of 15 messages or more depending on your setting)
+                                <br />
+                                <br />
+                                Then, we make the message.php file which will generate the list of recent messages and the list will be refreshed every 5 seconds.
+                                <br />
+                                <br />
+
+                            </div>
+                            <br />
+                        </ul>
+
+                        <!--Online interpreter-->
+                        <li>Online interpreter</li>
+                        <br />
+                        <b>Brief description: </b>After knowing the overall of the basic syntax, this feature will help users apply directly what they have learnt from the lessons by doing some given exercise on this online compiler instead of installing others IDE like VisualCode, PyCharm, etc.
+                        <br />
+                        <br />
+                        <b>How will we do ?</b>
+                        <br />
+                        <br />
+                        After researching, there are 2  possible solutions we came up with.
+
+                        <br />
+                        <br />
+                        <ul>
+                            <li>
+                                <b> Connected with the third-party services:</b>
+                                <br />
+                                <br />
+                            </li>
+
+                            <div>
+                                We will find and connect with the third-party services providing the online compiler and IDE like Programiz, Ideone, Replit, etc. This requires us to meet them and have a discussion with them. Therefore, we may have to prepare some paperwork relevant to the license and copyright.
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\online\1.png" />
+                                <br />
+                            </div>
+                            <li>
+                                <b>Making the online compiler using Nodejs:</b>
+                            </li>
+                            <br />
+
+                            According to “Online Compiler in Nodejs” by “IQ.OpenGenius.org”, there are a total of 4 steps to create the online compiler:
+                            <br />
+                            <br />
+                            <img class="image-center" src="image\detail\online\online.png" />
+                            <br />
+                            <div>
+                                <b>Step 1:</b> Set up the environment for the application
+                                <br />
+                                <br />
+                                Creating the directory to contain all the folders and files. Then, write these in the terminal or cmd
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\online\2.png" />
+                                <br />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 2:</b> Setting the necessity package
+                                <br />
+                                <br />
+                                Installing the following packages/modules which will be needed for the web application.
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\online\3.png" />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 3:</b> Making the root page
+                                <br />
+                                <br />
+                                We will create the basic HTML and CSS script for doing the platform of the online compiler. This requires 3 important things: the text area for text editors, the submit button and finally the output section. For the text editors, we may not follow up on this tutorial. Instead of that, we will use the open sources called “CodeMirror”
+                                <br />
+                                <br />
+                                About the CodeMirror, CodeMirror is the text editor written by JavaScript for the browser. It is used for editing code and supports a range of programming languages
+                                <br />
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\online\5.png" />
+                                <br />
+
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 4:</b>  Creating the app.js file
+                                <br />
+                                <br />
+                                In this file, we will contain all the packages uses for the web application as showing below
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\online\6.png" />
+                                <br />
+                                Then, we will create an app variable for using express packages and body parse
+                                <br />
+                                <br />
+                                And initialize the compiler option from the compilex package. Moreover, we have to link the ‘/’ root page with the index.file.
+                                <br />
+                                <br />
+                                Then, we will make the condition by defining the post function to match the user’s option of the programming language that they want to compile.
+                                <br />
+                                <br />
+                                We then set the server’s port to listen and define the get function to print out the output data if the users execute the code
+                                <br />
+                                <br />
+                                Finally, we have to define another function to clean the memory and remove the temporary files after use
+                                <br />
+                                <br />
+
+                            </div>
+                            <br />
+                        </ul>
+
+                        <!--Online judging system-->
+                        <li>
+                            Online judging system
+                        </li>
+                        <br />
+                        <br />
+                        <img class="image-center" src="image\detail\tool\1.png" />
+                        <br />
+                        <b>Brief description: </b>According to Wikipedia, online judging is the system that tests programs. For our case, this will be used in the exercise, the hackathon and competition. The system will automatically compile, execute the code and then compare the output of the code with the standard output.
+                        <br />
+                        <br />
+                        <b>How will we do ?</b>
+                        <br />
+                        <br />
+                        This is an important part of this web application. However, after researching, the only possible solution is using the open-source code. Below are some online judging systems which we have found:
+
+                        <br />
+                        <br />
+                        <ul>
+                            <li>
+                                <a href="https://online-judge-tools.readthedocs.io/en/master/_modules/onlinejudge/service/hackerrank.html">Source code for onlinejudge.service.hackerrank</a>
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                <a href="https://github.com/QingdaoU/OnlineJudge">QingdaoU/OnlineJudge</a> (
+                                <a href="https://github.com/QingdaoU/OnlineJudge/blob/master/LICENSE">MIT License</a>)
+                                <br />
+                                <br />
+                            </li>
+                            <li>
+                                <a href="https://github.com/DMOJ/online-judge">DMOJ/online-judge</a> (
+                                <a href="https://github.com/DMOJ/online-judge/blob/master/LICENSE">AGPL-3.0 License</a>)
+                                <br />
+                                <br />
+                            </li>
+
+                        </ul>
+                        <div>
+                            Before using all this open-source code, we first need to contact the author of these source code and get permission. This requires some paperwork.
+                            <br />
+                        </div>
+                        <br />
+
+                        <!--The forum-->
+                        <li>The forum</li>
+                        <br />
+                        <img class="image-center" src="image\detail\forum\1.jpg" />
+                        <br />
+                        <b>Brief description: </b> Forum is the place that users will post some things on and other users can comment on the posts.
+
+                        <br />
+                        <br />
+                        <b>How will we do ?</b>
+                        <br />
+                        <br />
+                        After researching, there are 2 solutions which we can deal with it
+                        <br />
+                        <br />
+                        <ul>
+                            <li>
+                                <b>Using the existing software:</b>
+                                <br />
+                            </li>
+                            <br />
+                            <div>
+                                There is a lot of free software that allows us to create and custom the forum. However, we will just list the most effective one:
+                                <br />
+                                <br />
+                                <a href="https://codeforum.org/">Code forum</a>: this platform is written by PHP and it is code-base software. We just have to download the files from their website and custom it by ourselves.
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\forum\1.png" />
+                                <br />
+                            </div>
+
+                            <br />
+
+                            <li>
+                                <b>Creating the forum by PHP and MySQL from Scratch</b>
+                            </li>
+                            <br />
+                            <br />
+                            According to
+                            <a href="https://code.tutsplus.com/tutorials/how-to-create-a-phpmysql-powered-forum-from-scratch--net-10188">“How to create a PHP/MySQL Powered Forum From Scratch”</a>, there will be 7 steps excluding the login and logout system
+                            <br />
+                            <br />
+                            <div>
+                                <b>Step 1:</b>Create the database table
+                                <br />
+                                <br />
+                                Besides creating the user’s table as we have done in the previous topic, we will create more 3 tables with the following attributes: categories(id, name, description), replies (id, content, date, topic, replied_by ) and topic (id, subject, date, id_categories, topic_by). After that, we will execute the queries on PHPMyAdmin
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\forum\18.png" />
+                                <br />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 2:</b> Create the categories
+
+                                <br />
+                                <br />
+                                First, we use form tag to wrap the category session contains the categories selection and the text-area where users write
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\forum\5.png" />
+                                <br />
+                                Then, we will create a PHP script that checks if users have admin permissions to post and if they do, the form will display. Right after they finish write the content and click submit, the value will be saved as the MySQL queries execute
+                                <br />
+
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 3:</b> Adding the categories to index.php
+                                <br />
+                                <br />
+                                First, we will display the categories table by using the select syntax to select the categories id, category name and the category description.
+                                <br />
+                                <br />
+                                Then, we will use a bit help of PHP to display the results
+                                <br />
+
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 4:</b> Create the topic
+
+                                <br />
+                                <br />
+                                First, we have to check if the users are already signed in and if they do, we show them the form
+                                <br />
+
+                                <br />
+                                Secondly, we use the drop-down menu that selects the cat_id, cat_name, cat_des from the categories table
+                                <br />
+
+                                <br />
+                                Thirdly, for making the processing saving part consist of two parts: saving the topic from the table and saving the first post in the first table. This called the transaction methods
+                                <br />
+                                <br />
+                                Fourthly, we create the queries that insert the topic_subject that users create into the topic table
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\forum\11.png" />
+                                <br />
+                                Fifthly, if we process the second query, this will insert the post that users create into the post table
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\forum\12.png" />
+                                <br />
+                                Finally, we combined all these codes.
+                                <br />
+                                <br />
+
+
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 5:</b> Category view
+                                <br />
+                                <br />
+                                In this session, we need to select two tables which are category and topic table and display it in the following order. For the category table the name of the category, categories description and for the topic table:  topic_id, topic_subject, topic_date.
+                                <br />
+                                <br />
+                                Then, we used those queries in this completely category.php script. First, we will select the categories which match the users' choice. Check if we can get the categorise from it and if it does, display the data from categories and execute the queries
+                                <br />
+                                <br />
+
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 6:</b> Topic View
+                                <br />
+                                <br />
+                                To view, the topic, just as using the same methods as step 5: category view, we first select the topic_id and the topic_subject that match the id of the topic from database which users select
+                                <br />
+
+                                <br />
+                                Now, we display all the post in the topic by executing the following queries
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\forum\16.png" />
+                                <br />
+                            </div>
+                            <br />
+                            <div>
+                                <b>Step 7:</b>  Adding a reply
+                                <br />
+                                <br />
+                                We first wrap the text-area where users put the comment and the submit button with form tags
+                                <br />
+                                <br />
+                                <img class="image-center" src="image\detail\forum\17.png" />
+                                <br />
+                                Then, we will check if it calls the file correctly and if it does check again if the users have already signed in. Finally, get the users’ replies and save it in the database.
+                                <br />
+
+                            </div>
+                            <br />
+
+                        </ul>
+                    </ol>
+
+                    <!--The non-technical and the processor-->
+                    <div>
+                        <b>The non-technical and the procession</b>
+                    </div>
+                    <ol>
+                        <!--Videos / Tutorial/ Exercise/ PetProject:-->
+                        <li>
+                            <b>Videos / Tutorial/ Exercise/ PetProject</b>
+                            <br />
+                            <br />
+                            <div>
+                                <b>Brief description:</b> These would help the users to learn fast and engage with quality knowledge. Besides, they can practice after what they have learned
+                            </div>
+                            <br />
+                            <div>
+                                <b>How will we do that</b>
+                            </div>
+                            <br />
+                            <br />
+                            <img class="image-center" src="image\detail\videos\1.jpg" />
+                            <br />
+                            <div>
+                                <b>Software use: </b>The videos will be made by Adobe After Effect or Adobe Premiere. All the content for tutorials and exercise will be written using Word or Google doc. Besides that, we also need the translation tool such as Google Translate or the dictionary such as Oxford, Cambridge dictionary to translate from English into Vietnamese
+                            </div>
+                            <br />
+                            <img class="image-center" src="image\detail\videos\2.jpg" />
+                            <br />
+                            <div>
+                                <b>Content:</b> The hardest thing in this part is how we create the content which has to be easy to understand and also has to be quality.
+                            </div>
+                            <br />
+                            <div>
+                                First, we will reference academic books or quality courses that are created by top universities such as Oxford, Harvard, Stanford, etc. After searching, we will develop the content in the ways we think the users may easily understand, and all of this has to be in Vietnamese.
+                            </div>
+                            <br />
+                            <div>
+                                Then, we will ask someone who is an expert such as a professor in this field or anybody that we think is quality enough to look at the content and get the advice from them. This process may take a long time since we have to translate technical terms in English into Vietnamese or we have to define that in an understandable way.
+                            </div>
+                            <br />
+                        </li>
+                        <!--Illustration and Images-->
+                        <li>
+                            <b>Illustration and Images</b>
+                            <br />
+                            <br />
+                            <img class="image-center" src="image\detail\ill\1.png" />
+                            <br />
+                            <div>
+                                <b>Brief description:</b> To make our website more attractive, besides just using CSS to style our website, we need to include images and illustrations for each course
+                            </div>
+                            <br />
+                            <div>
+                                <b>How will we do that</b>
+                            </div>
+                            <br />
+                            <img class="image-center" src="image\detail\ill\2.jpg" />
+                            <br />
+                            <div>
+                                <b>Software use: </b>We will use Adobe Photoshop and Adobe Illustrators to make this. The process to make it is hard to demonstrate since it depends on the ideas we want to create
+                            </div>
+                            <br />
+                            <div>
+                                <b>Content:</b> First we will discuss with each other to come up with the idea to make the banner, the illustrator and the icon for our website. After having listed a bunch of ideas, we will take the best of it and then contact the designer since nobody in the team is good at editing and photoshopping.
+                            </div>
+                            <br />
+                        </li>
+                        <!--Recurement services-->
+                        <li>
+                            <b>
+                                Recruitment services
+                            </b>
+                            <br />
+                            <br />
+                            <img class="image-center" src="image\detail\hire\1.jpg" />
+                            <br />
+                            <div>
+                                <b>Brief description:</b> After finishing our course and meeting our standard, the users will be connected with recruiters of the company.
+                            </div>
+                            <br />
+                            <div>
+                                <b>How will we do that</b>
+                            </div>
+                            <br />
+                            <div>
+                                First, we will make the list of companies that require jobs in these IT fields and then make an appointment with them. To make sure the safety for the users, the company we find for them is legal such as the company is not a shell corporation.
+                            </div>
+                            <br />
+                            <div>
+                                We then negotiate and make sure for the companies that the people we introduce to them are qualified enough to work in their company since before getting connected to these companies, the users have to meet our standard (by passing the test or the interview, doing the project, etc). This requires us to make some commitments and paperwork.
+                            </div>
+                            <br />
+                            <div>
+                                By having the trust of these companies, we will introduce the users to them and if they don’t pass the interview of the companies, we will find the reason behind why they failed, give them the advice and introduce them to another company
+                            </div>
+                            <br />
+                        </li>
+                        <!--Hackathon/ Competition:-->
+                        <li>
+                            <b>
+                                Hackathon/ Competition:
+                            </b>
+                            <br />
+                            <br />
+                            <img class="image-center" src="image\detail\hack\1.jpg" />
+                            <br />
+                            <div>
+                                <b>Brief description:</b> Every week, online coding contests are organized. It can be individual or users can form the team to participate in the competition. This feature not only helps users to apply what they have learned but also to know their ability. Therefore, they can modify the study plan to develop themselves. Furthermore, the best thing about joining the competition is that users can expand their networking. They will know more people and learn new things from others.
+
+                            </div>
+                            <br />
+                            <div>
+                                <b>How will we do that</b>
+                            </div>
+                            <br />
+                            <div>
+                                We need to separate into 4 teams: Logistic, Programing, ER, Marketing.
+                            </div>
+                            <br />
+                            <div>
+                                <b>Programming team:</b> First, we will make the timeline for the Hackathon and Competition such as which date we will start, which date we end and what we will do on this day. In the case of the worst situation, we have to have a backup plan such as bad weather, someone injured, etc and we have to list every scenario that we can come up with.
+                            </div>
+                            <br />
+                            <div>
+                                Then, we will design the structure of problems to give the users to solve. We may need support from experts to come up with ideas for the problems. Having done with creating those, we will then have to make the rubric for each of them so that we can look at that and grade it.
+                            </div>
+                            <br />
+                            <div>
+                                <b>ER team:</b> For holding the big contest like this, we may have to find the sponsors. First, we will search what companies or organizations that had sponsored for any competition before.
+                            </div>
+                            <br />
+                            <div>
+                                Then, we will contact them, give them reasons why they can have benefits if they sponsor for our contest. If they agree to sponsor for our competition, we will have to do some paperwork or contract and give it to them.
+                            </div>
+                            <br />
+                            <div>
+                                <b>Logistic team:</b> If we want to hold the competition, we have to find the venue and consider the price. After finding the most suitable place, we then contact them and give them the contract we have prepared.
+                            </div>
+                            <br />
+                            <div>
+                                <b>Marketing team:</b> First we will create the fan page for the CodeX. We will come up with the content to put in the fan page such as the information for the contest, the timeline of the contest, the click-bait content that attracts users to attend the competition.
+                            </div>
+                            <br />
+                        </li>
+                    </ol>
+
+                    <div>
+                        <b>How far you have got with developing any features or outcomes from your projects ?</b>
+                    </div>
+                    <p>
+                        Unfortunately, our knowledge and our skills are not wide enough to do that even though we have the source, the solution for each of the problems since we want to develop by ourselves so that if we debug or change the code, we know the right place to do that.
+
+                    </p>
+                    <br />
+                </div> <!--The end of what your project will do-->
 </body>
 </html>
