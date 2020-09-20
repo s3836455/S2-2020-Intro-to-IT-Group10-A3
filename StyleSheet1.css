@@ -1,0 +1,548 @@
+﻿html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: Arial;
+    scroll-behavior: smooth;
+}
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+
+h1 {
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+.text-h1 {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.big {
+    font-size: 50px;
+    font-family: 'Merriweather', serif;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+}
+
+h2 span {
+    font-family: 'Satisfy', cursive;
+    background-color: white;
+    padding: 0 10px;
+    font-size: 30px;
+}
+
+/*Making the line*/
+hr.line {
+    border-top: 4px solid;
+    border-radius: 5px;
+    width: 400px;
+}
+
+/*Navigation bar*/
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+.nav li {
+    float: left;
+}
+
+    .nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        .nav li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+.nav {
+    position: fixed;
+    width: 98.7%;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+/* DEMO-SPECIFIC STYLES */
+.type-write h1 {
+    width: 750px;
+    text-align-last: center;
+    color: black;
+    font-family: 'Merriweather', serif;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40,end), blink-caret .5s steps(10) infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 750px;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/*Make the the paragraph in the center*/
+.grid-item2 {
+    text-align: justify;
+    justify-content: center;
+    align-content: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+
+/*The background cover section*/
+.thumbnail {
+    /* The image used */
+    background-image: url("https://i.pinimg.com/originals/6a/8b/50/6a8b50ac0aa0e64f224bcee2f0afbd66.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover {
+    /* The image used */
+    background-image: url("https://wallpaperaccess.com/full/1426870.png");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover1 {
+    /* The image used */
+    background-image: url("https://www.cryptocurrencykb.com/wp-content/uploads/2019/05/Cryptocurrency-Wallpaper-11.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.role {
+    /* The image used */
+    background-image: url("https://media.wired.com/photos/5f32ea0cc693e7df1016521e/2:1/w_2399,h_1199,c_limit/28.09%20Ford_Top%20Art.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.limit {
+    /* The image used */
+    background-image: url("https://www.mycustomer.com/sites/default/files/istock_erhui1979_limitation.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bg-cover2 {
+    /* The image used */
+    background-image: url("https://cdn.hipwallpaper.com/i/32/0/oFqEQK.png");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover3 {
+    /* The image used */
+    background-image: url("https://images.wallpapersden.com/image/download/making-cyberpunk-robot_72352_3840x2160.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover4 {
+    /* The image used */
+    background-image: url("https://i.pinimg.com/originals/34/8e/b4/348eb457205c7a746294ff5ce42a02e5.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover5 {
+    /* The image used */
+    background-image: url("https://ak.picdn.net/shutterstock/videos/21074224/thumb/8.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-cover6 {
+    /* The image used */
+    background-image: url("https://besthqwallpapers.com/Uploads/7-5-2020/132340/thumb2-3d-blue-padlock-computer-security-encryption-3d-lock-security-blue-background.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.job {
+    /* The image used */
+    background-image: url("https://images.wallpapersden.com/image/download/minimal-glowing-code-binary_63680_2560x1080.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tool {
+    /* The image used */
+    background-image: url("https://kinsta.com/wp-content/uploads/2020/01/git-vs-github-1024x512.png");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.webdevelope {
+    /* The image used */
+    background-image: url("https://www.2ndquadrant.com/wp-content/uploads/2019/11/10586-graphics-developer-support-page-3.png.webp");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.webdevelope1 {
+    /* The image used */
+    background-image: url("https://www.freepik.com/blog/app/uploads/2018/10/code.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ai {
+    /* The image used */
+    background-image: url("https://cdn.lynda.com/static/landing/images/hero/BecomeADataEngineerMasteringTheConcepts_1200x630-1513903502511.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.ai1 {
+    /* The image used */
+    background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2013/12/20/200728/f6e43589af6fd12edac384e36ebc4864.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.database {
+    /* The image used */
+    background-image: url("https://techgenix.com/tgwordpress/wp-content/uploads/2018/09/dba_admin.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.database1 {
+    /* The image used */
+    background-image: url("https://insights.dice.com/wp-content/uploads/2019/07/shutterstock_664638928.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overview {
+    /* The image used */
+    background-image: url("https://d2slcw3kip6qmk.cloudfront.net/marketing/blog/2016Q4/8-steps-to-build-a-project-management-timeline@2x.png");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.software {
+    /* The image used */
+    background-image: url("https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/types-of-software.png");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.detail {
+    /* The image used */
+    background-image: url("https://cdn.lynda.com/course/618730/618730-637286223690102840-16x9.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.group_process1 {
+    /* The image used */
+    background-image: url("https://www.filepicker.io/api/file/DEVpjze5RASIuuJq82sU");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.scope {
+    /* The image used */
+    background-image: url("https://www.hireanillustrator.com/i/images/2013/06/TOMAC_eDiscovery.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tools {
+    /* The image used */
+    background-image: url("https://www.raconteur.net/wp-content/uploads/2016/07/10-collaboration-tools.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.testing {
+    /* The image used */
+    background-image: url("https://cdn.lynda.com/course/140844/140844-637286150988819535-16x9.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.time {
+    /* The image used */
+    background-image: url("https://images.wallpaperscraft.com/image/fractal_mechanism_patterns_123591_1366x768.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.risk {
+    /* The image used */
+    background-image: url("https://ericbrown.com/wp-content/uploads/2018/06/What-is-an-IT-security-risk.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.group_process {
+    /* The image used */
+    background-image: url("https://3kllhk1ibq34qk6sp3bhtox1-wpengine.netdna-ssl.com/wp-content/uploads/2018/11/in-their-own-words-pt-1_featured@3x-1560x760.png");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.skills {
+    /* The image used */
+    background-image: url("https://applyup.com/blog/wp-content/uploads/2020/01/Innovative-Recruitment-Methods-Used-by-Leading-Organization-1-6-scaled.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feed {
+    /* The image used */
+    background-image: url("https://www.pmcolumn.com/wp-content/uploads/2019/06/best-feedback-books.jpg");
+    /* Set a specific height */
+    min-height: 300px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.grid-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-item1 p {
+    text-align: justify;
+    margin: 10px;
+    width: 350px;
+}
+
+.grid-item3 p {
+    text-align: justify;
+    margin: 10px 0 20px;
+    width: 500px;
+}
+
+/*Making the ava form circle in the personal information*/
+.cicrle-ava {
+    border-radius: 50%;
+    grid-area: img;
+    width: 300px;
+    height: 300px;
+}
